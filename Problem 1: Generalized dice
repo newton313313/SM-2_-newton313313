@@ -1,4 +1,4 @@
-import(math)
+import math
 def Ndice(s,t,n):
 	print("trials =" , t)
 	print("sides =", s)
