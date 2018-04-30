@@ -1,13 +1,13 @@
-import math
+import random
 def Ndice(s,t,n):
 	print("trials =" , t)
 	print("sides =", s)
 	a = []
 	di= []
 	for k in range(0,n):
-	print("dice_number=",k)
+		print("dice_number=",k)
 		for i in range(0,t):
-			a.append(1+int(s*random.random()))
+			a.append(int(s*random.random()))
 			b=0
 			c=0
 		for j in range(0,t):
@@ -19,4 +19,4 @@ def Ndice(s,t,n):
 		print("variance=" + str(d))
 		di.append(a)
 	print(di)
-	
+Ndice(10,10,2)
