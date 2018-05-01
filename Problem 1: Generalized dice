@@ -19,4 +19,9 @@ def Ndice(s,t,n):
 		print("variance=" + str(d))
 		di.append(a)
 	print(di)
-Ndice(10,10,2)
+	
+def run():
+	Ndice(10,100,2)
+	Ndice(20,100,2)
+	
+	
