@@ -37,3 +37,7 @@
 	print("standard deviation =" + str(d**0.5))
 	print("mean =" + str(b/t))
 	print("variance=" + str(d))
+	x = []
+	for i in range(0,t):
+		x.append(int(a[i] + a1[i]))
+	print("sum", x)
