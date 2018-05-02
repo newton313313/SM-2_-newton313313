@@ -1,4 +1,4 @@
-###1.
+####1.
 >>> import random
 >>> def dice(s1,s2,t):
 	print("trials =" , t)
