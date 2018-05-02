@@ -23,8 +23,10 @@ def Ndice(s,t,n):# generate N dices
 def run():
 	Ndice(10,100,2)
 	Ndice(20,100,2)
-####
-def co(s,t,n):#counts for n dices distribution
+####3. two-sided dice
+def co(s,t,n):
+	#counts for n dices distribution
+	import random
 	print("trials =" , t)
 	print("sides =", s)
 	a = []
@@ -41,19 +43,20 @@ def co(s,t,n):#counts for n dices distribution
 	print("standard deviation =" + str(d**0.5))
 	print("mean =" + str(b/t))
 	print("variance=" + str(d))
-	print(a)
+	print(toss,a) #toss result
 	for k in range(0,t):
 		f=0
-		print("k",k)
-		for u in range(0,n-1):
-			f = f+a[(t-1)*k+u]
+		for u in range(0,n):
+			f = f+a[(n)*k+u]
 		e.append(int(f))
-		print("f",f)
-		print("e",e)
 	h=[]
 	for i in range(0,s*n):
-		h.append(e.count(i))
-	print(e)
-	print("distribition ",h)
+		h.append(e.count(i+1))
+	print("result",e)
+	print("distribition ",h) #the distribution of sum of two dice
 def r():
-	co(10,10,2)
+	co(2,100,2)
+	co(2,100,20)
+	co(2,100,10)
+	
+
