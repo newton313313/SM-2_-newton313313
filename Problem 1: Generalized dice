@@ -14,14 +14,16 @@ def Ndice(s,t,n):
 				b = b + a[j]
 				c = c + a[j]**2
 		d =(c/t-b*b/t/t)
-		print("standard deviation =" + str(d**0.5))
-		print("mean =" + str(b/t))
-		print("variance=" + str(d))
+	print("standard deviation =" + str(d**0.5))
+	print("mean =" + str(b/t))
+	print("variance=" + str(d))
 		di.append(a)
 	print(di)
 	
 def run():
 	Ndice(10,100,2)
 	Ndice(20,100,2)
+####
+
 	
 	
