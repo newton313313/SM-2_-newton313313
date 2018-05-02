@@ -56,3 +56,5 @@ def co(s,t,n):#counts for n dices distribution
 		h.append(e.count(i))
 	print(e)
 	print("distribition ",h)
+def r():
+	co(10,10,2)
