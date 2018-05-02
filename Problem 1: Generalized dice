@@ -1,5 +1,5 @@
 import random
-def Ndice(s,t,n):
+def Ndice(s,t,n):# generate N dices 
 	print("trials =" , t)
 	print("sides =", s)
 	a = []
@@ -14,9 +14,9 @@ def Ndice(s,t,n):
 				b = b + a[j]
 				c = c + a[j]**2
 		d =(c/t-b*b/t/t)
-	print("standard deviation =" + str(d**0.5))
-	print("mean =" + str(b/t))
-	print("variance=" + str(d))
+		print("standard deviation =" + str(d**0.5))
+		print("mean =" + str(b/t))
+		print("variance=" + str(d))
 		di.append(a)
 	print(di)
 	
@@ -24,6 +24,32 @@ def run():
 	Ndice(10,100,2)
 	Ndice(20,100,2)
 ####
-
+def co(s,t,n):#counts for n dices distribution
+	print("trials =" , t)
+	print("sides =", s)
+	a = []
+	e = []
+	print("dice_number=",n)
+	for i in range(0,t*n):
+		a.append(int(s*random.random()))
+		b=0
+		c=0
+	for j in range(0,t*n):
+		b = b + a[j]
+		c = c + a[j]**2
+	d =(c/t/n-b*b/t/t/n/n)**0.5
+	print("standard deviation =" + str(d**0.5))
+	print("mean =" + str(b/t))
 	
-	
+	print("variance=" + str(d))
+	print(a)
+	for k in range(0,t):
+		f=0
+		for u in range(0,n):
+			f = (t-1)*k+u
+		e.append(int(b))
+	h=[]
+	for i in range(0,s*n):
+		h.append(e.count(i))
+	print(e)
+	print("distribition ",h)
