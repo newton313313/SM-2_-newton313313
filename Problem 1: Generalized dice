@@ -40,14 +40,17 @@ def co(s,t,n):#counts for n dices distribution
 	d =(c/t/n-b*b/t/t/n/n)**0.5
 	print("standard deviation =" + str(d**0.5))
 	print("mean =" + str(b/t))
-	
+
 	print("variance=" + str(d))
 	print(a)
 	for k in range(0,t):
 		f=0
-		for u in range(0,n):
-			f = (t-1)*k+u
-		e.append(int(b))
+		print("k",k)
+		for u in range(0,n-1):
+			f = a[(t-1)*k+u]
+		e.append(int(f))
+		print("f",f)
+		print("e",e)
 	h=[]
 	for i in range(0,s*n):
 		h.append(e.count(i))
